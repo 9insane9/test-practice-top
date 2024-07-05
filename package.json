@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "webpack --watch",
+    "test": "jest",
+    "webwatch": "webpack --watch",
+    "jestwatch": "jest --watch /*.js",
     "start": "webpack serve --open --config webpack.config.dev.js",
     "build": "webpack --config webpack.config.prod.js"
   },
@@ -13,11 +14,15 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.24.7",
+    "@babel/preset-env": "^7.24.7",
     "@eslint/js": "^9.3.0",
+    "babel-jest": "^29.7.0",
     "css-loader": "^7.1.1",
     "eslint": "^9.3.0",
     "globals": "^15.2.0",
     "html-webpack-plugin": "^5.6.0",
+    "jest": "^29.7.0",
     "style-loader": "^4.0.0",
     "webpack": "^5.91.0",
     "webpack-cli": "^5.1.4",
